@@ -9,30 +9,36 @@ Use this brief in preference to the earlier flagship, sitcom and object-narrator
 
 Source: the latest user-supplied markdown containing 250 numbered questions. Q numbers below refer to that markdown, not PDF pages. Its parenthetical numbers are unexplained and are not treated as emotional scores or page references. Some wording differs from the earlier PDF; verify against the final book before showing a question as a photographed or exact printed page.
 
-## Language requirement — applies to every deliverable
+## Sound and language requirements — current user preference
 
-All audience-facing language must be **Modern Standard Arabic (العربية الفصحى المعاصرة)**: narration, dialogue, opening hooks, questions, subtitles, titles, thumbnails and captions. Use clear, warm, natural spoken fusha with short sentences and restrained imagery. This requirement overrides all earlier colloquial drafts in this repository. Production instructions may remain in English. Use an Arabic voice that pronounces fusha naturally; add selective diacritics where pronunciation is ambiguous. Avoid regional dialect, stiff ceremonial language and exaggerated sentimentality.
+**Sound effects and environmental ambience only. No voiceover, dialogue, speech, TTS, music, singing, humming or recorded human vocalisations.** These instructions override earlier narration drafts and the upstream styles' default voice/music suggestions.
+
+Tell each story through action, framing, rhythm and a concrete visual change. Do not replace the former narration with paragraphs on screen. Keep on-screen text minimal: normally one final question, optionally one very short cue if essential. The user has not prohibited written text.
+
+All audience-facing written language must be **Modern Standard Arabic (العربية الفصحى المعاصرة)**: questions, titles, thumbnails and captions. Use clear, warm, short sentences. Production instructions may remain in English. This language rule overrides earlier colloquial drafts.
+
+Let natural sounds carry the scene: a wheel, a cup placed down, footsteps, paper, a latch, fabric, wind or birds when appropriate. Use quiet pauses deliberately. No musical or cinematic score.
 
 ## The concept
 
 **أمي، احكي لي**  
 **One short film. One way to understand her more deeply. One question to continue the conversation.**
 
-Each film takes one question and explores the human meaning behind it through an ordinary scene, a carefully worded reflection, or a useful explanation.
+Each film takes one question and explores its human meaning through an ordinary scene or a visual metaphor, performed without speech.
 
-The viewer receives an emotional experience and an opening for a real conversation. The mother supplies her own answer. A narrator must not confidently tell viewers what their mother secretly felt.
+The viewer receives an emotional experience and an opening for a real conversation. The mother supplies her own answer. Visual examples are possibilities, not claims about what every mother secretly feels.
 
 The sequence can be daily, but produce and review a seven-film batch before committing to a long daily schedule. The user's wording suggests a possible cadence, not a request to create a scheduled automation.
 
 ## What an episode contains
 
-1. A compelling opening about the question's underlying subject, with a meaningful visual already moving.
+1. A compelling visual opening, with meaningful action already moving.
 2. One concrete scene or observation.
-3. A turn that adds understanding: a different way to see the moment, a distinction, or a small fact if researched.
+3. A visual turn that adds understanding: a revealed detail, a new perspective or a completed action.
 4. The actual question to ask Mum, with enough time to read it.
-5. Optionally, a gentle follow-up such as «احكي لي عن يوم تتذكرينه» or «ما الذي كان يساعدك آنذاك؟».
+5. Put optional follow-up questions in the post caption to keep the film visually focused.
 
-Suggested starting length: 30–45 seconds, adjusted to natural Arabic narration. A complex informative episode may need longer. No arbitrary requirement to fit every question into the same duration.
+Suggested starting length: 30–40 seconds, adjusted to readable visual action and the final written question. A complex informative episode may need longer. No arbitrary requirement to fit every question into the same duration.
 
 Use a short series label or episode number in the caption or thumbnail. Start the film with its hook, not an opening title sequence.
 
@@ -42,13 +48,13 @@ Use a short series label or episode number in the caption or thumbnail. Start th
 
 A specific image opens into a possibility that the viewer may not have considered.
 
-Example: a lunch, toys in the living room, a mother calling her children to eat. The reflection asks whether an ordinary day might be a moment she would choose to relive.
+Example: a lunch, toys in the living room, a mother calling her children to eat. The contrast between the ordinary moment and her present-day attention to it suggests why it might matter.
 
-Use words such as «لعلّ» أو «قد» and «أحيانًا» where imagining an experience. Resolve with an invitation to discover her actual memory.
+Frame imagined experiences as possibilities in the post caption. Resolve with a written invitation to discover her actual memory.
 
 ### B. Understanding through explanation
 
-Explain something relevant, then connect it to the question.
+When explanation adds value, use a clear visual demonstration and concise written context in the post caption. Keep the film free of speech.
 
 Possible future subjects: scent and remembered places; how a familiar song can bring back a particular period; the distinction between knowing a family fact and hearing a person's experience of it.
 
@@ -64,7 +70,7 @@ Clearly identify fictional vignettes in the caption. Do not invent customer test
 
 ## Strong starting questions and treatments
 
-| Source Q | Theme | Opening hook | What the film explores |
+| Source Q | Theme | Optional written prompt / caption idea | What the film explores |
 |---|---|---|---|
 | 235 | An ordinary moment worth reliving | لو استطاعت أمّك العودة إلى يوم واحد من حياتها، فأيّ يوم ستختار؟ | A day can be important without having looked special while it happened. |
 | 203 | Quiet pride | ما الإنجاز الذي تفخر به أمّك، وربما لا تعرفه؟ | Give space to her own definition of achievement: work, learning, relationships, home or something else. |
@@ -79,52 +85,23 @@ Clearly identify fictional vignettes in the caption. Do not invent customer test
 | 195 | Distance and belonging | حين ابتعدت أمّك عن بيتها، ماذا حملت منه في قلبها؟ | A remembered person, sound, routine or place; use only where departure applies. |
 | 247 | Gratitude | رغم كلّ ما مرّت به أمّك، ما الذي ما زالت ممتنّة له؟ | Let the episode end with something she values today. |
 
-Q180 in the supplied markdown ends with an awkward qualifier. For spoken use, the editorial adaptation is: «ما الذي تتمنين أن يفهمه أبناؤك عنك؟». Identify it as adapted if presenting it alongside a question number.
+Q180 in the supplied markdown ends with an awkward qualifier. For the final written question, the editorial adaptation is: «ما الذي تتمنين أن يفهمه أبناؤك عنك؟». Identify it as adapted if presenting it alongside a question number.
 
-## Full pilot: يومٌ عاديّ بقي في القلب
+## Pilot 01: يومٌ عاديّ بقي في القلب — speech-free treatment
 
 **Source:** Q235, «ما اللحظة التي لو عادت، لتمنّيتِ أن تعيشيها بنفس الشعور مرة أخرى؟»  
-**Form:** emotional reflection with hypothetical imagery  
 **Style:** crayon-book  
-**Target:** approximately 35–45 seconds after a voice read  
+**Target:** approximately 35–40 seconds  
+**Sound:** domestic foley and environmental ambience only  
 **Product:** absent from the film
 
-### Arabic narration draft — Modern Standard Arabic
-
-لو استطاعت أمّك العودة إلى يوم واحد من حياتها…
-فأيّ يوم ستختار؟
-
-قد تختار يومًا لم يحدث فيه شيء استثنائيّ.
-
-كنتم صغارًا، تلعبون في غرفة الجلوس.
-وكانت تناديكم إلى الطعام،
-فيتأخّر أحدكم كعادته.
-
-مرّ ذلك اليوم، ثم كبرتم،
-وتغيّرت تفاصيل البيت.
-
-ولعلّها ما زالت تتذكّر ضحكةً حول المائدة،
-أو حديثًا صغيرًا نسيه الجميع.
-
-فأيّ لحظة بقيت في قلبها؟
-
-فلنمنح أمهاتنا وقتًا للحكاية، ونسألهنّ:
-
-«ما اللحظة التي تتمنّين أن تعيشيها مرّة أخرى؟»
-
-ثمّ:
-«احكي لي ذلك اليوم، منذ بدايته.»
-
-### Direction
-
-- Open on a child halfway through a game as the call to eat arrives; avoid an empty paper opening.
-- Build one ordinary domestic scene in crayon: slippers, a small toy, daylight, movement toward the table.
-- Show a small action worth remembering: someone makes room, a child carries a plate carefully, or a shared laugh interrupts lunch.
-- Use a page turn to an adult child listening to Mum in the present. Keep her alive and engaged; no empty chair or implied death.
-- The transition means “ask her”, not “this fictional memory must be hers”.
-- Give the final question a calm hold. Keep the mother’s real answer beyond the narrator's authority.
-- Retain tactile paper, wax and simple hand-drawn acting. Use Arabic-capable typography and correctly joined, right-to-left phrases.
-- Use a restrained musical phrase and domestic sound. Build warmth before nostalgia; avoid swelling sad music that forces a reaction.
+- Start with a child halfway through a game in a busy family room; a toy rolls close to the table.
+- Mum puts down a dish. The children notice her gesture and gather without any audible call.
+- Show one small, memorable action: a child carefully carries a plate, someone makes room, and the family exchange amused glances. Smiles have no vocal sound.
+- Turn the page to present-day Mum looking at an illustrated photograph of that same ordinary gathering. An adult child sits beside her and looks at it too.
+- Keep her alive and engaged; no empty chair or implied death.
+- Hold the final written question for about 7–8 seconds: «ما اللحظة التي تتمنّين أن تعيشيها مرّة أخرى؟».
+- Sound palette: rolling toy, footsteps, cutlery, dish on table, page turn and quiet room tone. No voice, laughter track or music.
 
 ### Caption draft
 
@@ -136,27 +113,21 @@ Q180 in the supplied markdown ends with an awkward qualifier. For spoken use, th
 
 من أسئلة حكاية أمي.
 
-## Two other episode outlines
+## Further episodes
 
-### الإنجاز الذي لا نعرفه — Q203
+### Episode 02: انتصار صغير — Q203
 
-**Hook:** «ما الإنجاز الذي تفخر به أمّك، وربما لا تعرفه؟»
+Use the complete speech-free storyboard in [episodes/02-quiet-pride.md](episodes/02-quiet-pride.md). An adult mother learns to ride a bicycle with support, then rides a short distance independently. Sound effects make the attempts and the moment of balance tangible. The final written question opens up her own achievement.
 
-Begin with familiar ways people display achievement, then move to several possible quieter achievements: completing a course, teaching someone a skill, building something she cares about, or keeping a difficult promise to herself.
-
-Do not decide which one belongs to her. End with «ما الشيء الذي بذلتِ فيه جهدًا وتفخرين به؟». Follow with «احكي لي كيف بدأ».
-
-**Style:** one-line. Let the line trace work and effort into something completed. Avoid using a trophy as the only definition of achievement.
+**Suggested style:** crayon-book, for clear physical performance.
 
 ### هل تعرف حلم أمّك؟ — Q225
 
-**Hook:** «نعرف أشياء كثيرة عن أمهاتنا، فهل نعرف أحلامهنّ؟»
+Show a woman repeatedly noticing a sketchbook in a shop window during an ordinary walk. One day she enters, takes it home and starts drawing. Her imperfect first sketch and a quiet smile provide the payoff. The scene suggests one possible wish; the final question invites the viewer to discover their own mother's actual dream.
 
-Start with ordinary preferences the family knows. A sketched door opens toward several possible ambitions, with one simple image for each. The possibilities stay visibly unfinished until the question is asked.
-
-End with «ما الحلم الذي سكن قلبك طويلًا؟» and the optional follow-up «وهل تغيّر مع السنين؟».
-
-**Style:** urban-sketch. Colour arrives with possibility. Do not assume every dream was abandoned because of children.
+**Final written question:** «ما الحلم الذي سكن قلبك طويلًا؟»  
+**Style:** urban-sketch. Colour arrives as she starts drawing.  
+**Sound:** footsteps, door bell, paper, pencil, outdoor/room ambience. No speech or music.
 
 ## First seven episodes
 
@@ -190,7 +161,7 @@ Treat this as the current editorial brief. Produce the pilot or an explicitly se
 
 Read the current upstream DIRECTOR.md, TECHNIQUE.md and selected STYLE.md. Build original scene action in the style; do not reuse a demo storyline.
 
-Use vertical 1080×1920 composition, a natural Modern Standard Arabic voice and correctly shaped Modern Standard Arabic subtitles. Apply the language requirement above to every audience-facing asset. Check the voice's pronunciation before the full render. Keep text away from Instagram overlay regions and inspect a phone-sized preview. Match pace to the recorded read.
+Use vertical 1080×1920 composition, visual storytelling and a sound-effects-only mix. No TTS or music generation. Use correctly shaped Modern Standard Arabic for the final written question. Apply the sound and language requirements above to every deliverable. Keep text away from Instagram overlay regions and inspect a phone-sized preview. Match pace to physical action and readability.
 
 Before rendering, write a short treatment stating:
 - source Q number and exact/adapted wording;
@@ -200,4 +171,4 @@ Before rendering, write a short treatment stating:
 - the visual change that delivers the emotional turn;
 - the final question.
 
-Then produce a real-style storyboard, a motion check and the finished local film with captions and source/provenance notes. Use the validation guidance in the earlier technical handoff, but let this document govern the editorial direction. No Instagram publication is authorised.
+Then produce a real-style storyboard, a motion check and the finished local film with a post caption and source/provenance notes. Listen through the final soundtrack to check that it contains only effects and environmental ambience, with no speech, music or human vocalisations. Confirm that the physical story is understandable with audio muted. Use the validation guidance in the earlier technical handoff, but let this document govern the editorial direction. No Instagram publication is authorised.

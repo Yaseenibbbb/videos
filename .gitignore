@@ -1,0 +1,5 @@
+# render intermediates (rebuilt by each project's build.sh)
+*/out/
+*/music/score.wav
+# finished films are large binaries: delivered as files, not stored in git
+*.mp4

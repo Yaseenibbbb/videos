@@ -1,0 +1,14 @@
+{
+ "episode": "02 · انتصار صغير (Q203)",
+ "fps": 24, "size": [1080, 1920], "dur": 38.0, "fade_out": 0.6,
+ "beats": [
+  {"id": "wobble",   "t0": 0.0,  "t1": 4.0,  "what": "close on the front wheel wobbling; her foot goes down to catch the balance"},
+  {"id": "tries",    "t0": 4.0,  "t1": 10.0, "what": "wide quiet square; she looks at the pedal, pushes off, rolls a little, stops (second try)"},
+  {"id": "help",     "t0": 10.0, "t1": 17.0, "what": "her grown son walks in, steadies the saddle; they exchange a look; her feet find both pedals"},
+  {"id": "alone",    "t0": 17.0, "t1": 24.0, "what": "the bike rolls; his hand eases off the saddle and stays behind; she rides on alone, the camera with her"},
+  {"id": "pride",    "t0": 24.0, "t1": 30.0, "what": "she brakes gently, looks back along the distance, finds him, smiles with quiet pride"},
+  {"id": "question", "t0": 30.0, "t1": 38.0, "what": "a simple composition, her and the bike small; the question on blank paper"}
+ ],
+ "events": {"foot1": 2.6, "push2": 6.4, "stop2": 8.6, "silence": [8.6, 9.6], "hand_on": 12.4, "look": 13.8, "pedal": 15.6, "go": 17.0, "release": [19.0, 21.0], "brake": 24.4, "turn": 25.6, "smile": 27.4},
+ "question": {"t0": 30.0, "t1": 37.4, "w": 1.6, "lines": ["ما الإنجاز الذي تفخرين به", "أكثر في حياتكِ،", "حتى لو لم يصفّق له أحد؟"], "text": "«ما الإنجاز الذي تفخرين به أكثر في حياتكِ، حتى لو لم يصفّق له أحد؟»"}
+}

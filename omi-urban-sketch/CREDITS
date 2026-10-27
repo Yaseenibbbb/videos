@@ -1,0 +1,10 @@
+omi-urban-sketch — credits
+
+Rendering code: engine files (engine.js) adapted from the Lemo-Opuscar style library (github.com/lemomo-ai/lemo-opuscar), MIT License, Copyright (c) 2026 LemoLab. Core tools (render, mux, sound synthesis) from the same library, MIT.
+Font: Playpen Sans Arabic (handwriting), SIL Open Font License 1.1 (fonts/OFL-PlaypenSansArabic.txt), via Fontsource.
+Font: El Messiri (call to action), SIL Open Font License 1.1 (fonts/OFL-ElMessiri.txt), via Fontsource.
+Book image: hikayat-book-mockup.webp from the Hikaytomi Shopify theme (Yaseenibbbb/-hikayat-omi-shopify-theme), the client's own product image.
+Sound effects and ambience: synthesised procedurally in mix.py (numpy/scipy); no recorded samples.
+Music versions only (*-music.mp4): samples from VS Chamber Orchestra: Community Edition (Versilian Studios), Versilian Community Sample Library (Versilian Studios), Karoryfer Samples (Sneakybass), all CC0 1.0; plucked strings / music box by physical modelling (pluck.py). Instruments used: jazz_bass (Karoryfer); flute (VSCO 2 CE); snare2 taps (VCSL); nylon guitar by physical modelling.
+
+Story, drawings and scenes: original to this film (fictional vignette). The client is responsible for the materials they supply and use.

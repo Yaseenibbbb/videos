@@ -1,0 +1,8 @@
+ep02-risograph — credits
+
+Rendering code: engine files (riso.js, draw.js) adapted from the Lemo-Opuscar style library (github.com/lemomo-ai/lemo-opuscar), MIT License, Copyright (c) 2026 LemoLab. Core tools (render, mux, sound synthesis) from the same library, MIT.
+Font: Readex Pro (the question), SIL Open Font License 1.1 (fonts/OFL-ReadexPro.txt), via Fontsource.
+Sound effects and ambience: synthesised procedurally in mix.py (numpy/scipy); no recorded samples.
+No music, no voice: effects and ambience only, as the episode brief asks.
+
+Story, drawings and scenes: original to this film (fictional vignette). The client is responsible for the materials they supply and use.

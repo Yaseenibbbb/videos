@@ -91,6 +91,7 @@ e_ = int(FILM * SR); fo = int(.8 * SR); mix[e_ - fo:e_] *= np.linspace(1, 0, fo)
 mix = mix.astype(np.float32)
 # tame the shoe/pedal transients: a look-ahead limit per channel at ~17 dB over the active RMS, so loudnorm can reach −14 LUFS under −1.2 dBTP
 act = np.sqrt(np.mean(mix[:e_] ** 2)) + 1e-9
+k = act * 4.0; mix = np.tanh(mix / k) * k   # soft saturation rounds the click transients first
 for c in (0, 1): mix[:, c] = limit(mix[:, c], min(.95, act * 7.0))
 os.makedirs(os.path.join(HERE, 'out'), exist_ok=True); sf.write(os.path.join(HERE, 'out', 'mix.wav'), mix, SR)
 def db(x): return 20 * np.log10(np.sqrt(np.mean(x ** 2)) + 1e-9)

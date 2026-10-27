@@ -163,7 +163,7 @@ let CAMX, CAMY, CAMZ;
 function camAt(t) {
   const bx = bikeX(t), stop = bikeX(TL.dur);
   const keys = [[0, bx + 120, GY - 110, 2.1], [3.6, bikeX(3.6) + 110, GY - 120, 1.9], [6.0, 520, GY - 220, .9], [9.6, 520, GY - 220, .9], [11.2, 330, GY - 170, 1.35],
-    [16.6, 360, GY - 180, 1.4], [18.5, bikeX(18.5) + 100, GY - 200, 1.05], [23.6, bikeX(23.6) + 120, GY - 200, 1.0], [27.0, (stop + 900) / 2, GY - 330, .52], [29.4, (stop + 900) / 2 + 10, GY - 330, .52], [32.0, stop - 40, GY - 560, .62], [38, stop - 40, GY - 570, .62]];
+    [16.6, 360, GY - 180, 1.4], [18.5, bikeX(18.5) + 100, GY - 200, 1.05], [23.6, bikeX(23.6) + 120, GY - 200, 1.0], [25.2, stop + 10, GY - 190, 1.45], [28.2, stop, GY - 195, 1.5], [30.4, (stop + 900) / 2, GY - 330, .52], [31.2, (stop + 900) / 2 + 10, GY - 330, .52], [33.2, stop - 40, GY - 560, .62], [38, stop - 40, GY - 570, .62]];   // held on her face for the stop, the look back, the smile; then out along the painted road
   let i = 0; while (i < keys.length - 2 && t > keys[i + 1][0]) i++;
   const a = keys[i], b = keys[i + 1], u = eio(seg(t, a[0], b[0]));
   let x = lerp(a[1], b[1], u), y = lerp(a[2], b[2], u), z = Math.exp(lerp(Math.log(a[3]), Math.log(b[3]), u));
@@ -190,7 +190,7 @@ function render(t) {
   drawList(ctx, mum.S, seg(t, -0.2, 0.9));
   if (sonS && so.hand) drawList(ctx, sonS, 1);
   // mist: from 29.8 the square washes back to paper, rising from the bottom edge; she and the bike stay (painted again on top)
-  const mi = ss(seg(t, 29.6, 31.6));
+  const mi = ss(seg(t, 30.8, 32.8));
   if (mi > 0) {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     const edge = lerp(H + 100, -200, mi);
@@ -217,7 +217,7 @@ window.render = render;
   for (let t = 0; t <= TL.dur; t += 0.02) sp.push([+t.toFixed(2), +Math.max(0, (bikeX(t + .01) - bikeX(t - .01)) / .02).toFixed(1)]);
   ev.push({ t: 0, type: 'speed', data: sp }, { t: E.foot1, type: 'foot' }, { t: E.push2 - .25, type: 'pedal' }, { t: E.push2, type: 'push' }, { t: E.stop2, type: 'foot' }, { t: E.stop2 - .15, type: 'brake', k: .4 },
     { t: 10.0, type: 'steps', t1: 12.2, rate: 1.9 }, { t: E.hand_on, type: 'saddle' }, { t: E.look, type: 'cloth' }, { t: E.pedal, type: 'pedal' }, { t: E.pedal + .4, type: 'pedal' },
-    { t: E.go, type: 'steps', t1: E.release[1] + 1.6, rate: 2.6, fade: 1 }, { t: E.release[0] + .6, type: 'cloth' }, { t: E.brake, type: 'brake', k: 1 }, { t: E.brake + .3, type: 'foot' }, { t: E.turn, type: 'cloth' }, { t: 4.0, type: 'paint', dur: 5 }, { t: 29.6, type: 'mist', dur: 2 });
+    { t: E.go, type: 'steps', t1: E.release[1] + 1.6, rate: 2.6, fade: 1 }, { t: E.release[0] + .6, type: 'cloth' }, { t: E.brake, type: 'brake', k: 1 }, { t: E.brake + .3, type: 'foot' }, { t: E.turn, type: 'cloth' }, { t: 4.0, type: 'paint', dur: 5 }, { t: 30.8, type: 'mist', dur: 2 });
   window.EV = ev;
   window.TEXTS = t => (t >= TL.question.t0 && t <= TL.question.t1 ? [{ id: 'q', text: TL.question.text, x0: 60, y0: 380, x1: 1020, y1: 760 }] : []);
   window.READY = true;

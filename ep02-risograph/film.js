@@ -32,10 +32,10 @@ function bikeState(t) {
   // wobble: big while unsure, gone once she rides
   const unsure = t < E.go + 1.2 ? 1 : 1 - pr(t, E.go + 1.2, E.go + 3);
   o.wobble = (0.07 * Math.sin(tc * 7.3) + 0.035 * Math.sin(tc * 13.1)) * unsure * (t < 2.6 || (t > 6.4 && t < 8.6) ? 1 : 0.25) * (t > 15.6 && t < E.go ? 0.2 : 1);
-  if (t >= 2.6 && t < 6.4) { o.footDown = [70, 0]; o.wobble = 0.02; }            // her foot down to catch the balance
-  if (t >= 8.6 && t < 15.6) { o.footDown = [72, 0]; o.wobble = 0.015; o.expr = t > 13.8 && t < 15.0 ? 'calm' : 'focus'; }
+  if (t >= 2.6 && t < 6.4) { o.footDown = [-40, 0]; o.wobble = 0.02; }            // her foot down to catch the balance
+  if (t >= 8.6 && t < 15.6) { o.footDown = [-40, 0]; o.wobble = 0.015; o.expr = t > 13.8 && t < 15.0 ? 'calm' : 'focus'; }
   if (t >= 13.8 && t < 15.0) o.lookBack = true;                                   // a look back to him
-  if (t >= E.brake + 0.2) { o.footDown = [74, 0]; o.wobble = 0; }
+  if (t >= E.brake + 0.2) { o.footDown = [-40, 0]; o.wobble = 0; }
   if (t >= E.turn) { o.lookBack = true; o.expr = t >= E.smile ? 'proud' : 'calm'; }
   if (t >= E.go && t < E.brake) o.expr = t > 21 ? 'smile' : 'focus';
   if (!moving) o.crank = Math.round(o.crank / Math.PI) * Math.PI + 0.6;            // pedals parked level-ish when stopped
@@ -59,7 +59,8 @@ const SHOTS = [
   { t: 4, cam: () => [640, 790, 0.8], reg: [[0, 0], [-3, 2], [2, -3]] },                                   // static wide: a small figure in a big square
   { t: 10, cam: t => [300, 1010 - 20 * pr(t, 13, 17), 1.5 + 0.1 * pr(t, 13, 17)], reg: [[0, 0], [2, 2], [-3, -1]] },   // two-shot, a slow push
   { t: 17, cam: t => [bikeX(t) + 140, 870, 0.92], reg: [[0, 0], [-2, -3], [3, 1]] },                        // tracking with her
-  { t: 24, cam: () => [(STOP_X + 980) / 2 + 40, 800, 0.56], reg: [[0, 0], [2, -1], [-2, 2]] },             // locked: horizon, disc, figure; him far behind
+  { t: 24, cam: t => [STOP_X - 10 - 60 * (1 - ss(pr(t, 24, 25.2))), 1060, 1.45], reg: [[0, 0], [-2, 1], [2, -2]] },             // medium on her: the stop, the look back, the smile
+  { t: 28.4, cam: () => [(STOP_X + 980) / 2 + 40, 800, 0.56], reg: [[0, 0], [2, -1], [-2, 2]] },           // locked: horizon, disc, figure; him far behind
 ];
 const shotAt = t => { let k = 0; SHOTS.forEach((s, i) => { if (t >= s.t) k = i; }); return k; };
 

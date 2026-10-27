@@ -9,7 +9,7 @@ from core.audio.sfx import SR, add, bp, lp, hp, limit
 HERE = os.path.dirname(os.path.abspath(__file__))
 E = json.load(open(os.path.join(HERE, 'events.json'))); FILM = E['dur']; EV = E['ev']
 TL = json.load(open(os.path.join(HERE, 'timeline.json')))
-DUR = FILM + 4.5; N = int(DUR * SR)   # a silent tail: ffmpeg 6.1's loudnorm holds back its last ~3 s, which mux.sh's length check would read as a cut-off file
+DUR = max(FILM + 4.5, 61.0); N = int(DUR * SR)   # a silent tail: ffmpeg 6.1's loudnorm holds back its last ~3 s, which mux.sh's length check (5 % tolerance) would read as a cut-off file; mux trims with -shortest
 rng = np.random.default_rng(7)
 T = np.arange(N) / SR
 def nz(d): return rng.standard_normal(max(1, int(round(d * SR))))
@@ -85,7 +85,10 @@ s0, s1 = TL['events']['silence']; g = np.interp(T, [s0, s0 + .25, s1 - .2, s1 + 
 fx[:, 0] = hp(fx[:, 0], 60); fx[:, 1] = hp(fx[:, 1], 60)
 mix = fx + amb
 e_ = int(FILM * SR); fo = int(.8 * SR); mix[e_ - fo:e_] *= np.linspace(1, 0, fo)[:, None]; mix[e_:] = 0
-mix = limit(mix.astype(np.float32), .95)
+mix = mix.astype(np.float32)
+# tame the shoe/pedal transients: a look-ahead limit per channel at ~17 dB over the active RMS, so loudnorm can reach −14 LUFS under −1.2 dBTP
+act = np.sqrt(np.mean(mix[:e_] ** 2)) + 1e-9
+for c in (0, 1): mix[:, c] = limit(mix[:, c], min(.95, act * 7.0))
 os.makedirs(os.path.join(HERE, 'out'), exist_ok=True); sf.write(os.path.join(HERE, 'out', 'mix.wav'), mix, SR)
 def db(x): return 20 * np.log10(np.sqrt(np.mean(x ** 2)) + 1e-9)
 for i in range(0, int(FILM), 4): sl = slice(i * SR, (i + 4) * SR); print(f'{i:2d}s  fx {db(fx[sl]):6.1f}  amb {db(amb[sl]):6.1f}')

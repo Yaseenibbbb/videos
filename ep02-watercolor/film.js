@@ -24,7 +24,7 @@ const frontier = t => Math.max(...[0, 0.5, 1, 1.5, 2].map(d => bikeX(Math.max(0,
 
 // —— the rig (side view, facing right) ——
 const ik = (a, t, l1, l2, bend = 1) => { const dx = t[0] - a[0], dy = t[1] - a[1]; let d = Math.min(Math.hypot(dx, dy), l1 + l2 - .01); const b = Math.atan2(dy, dx), A = Math.acos(clamp((l1 * l1 + d * d - l2 * l2) / (2 * l1 * d), -1, 1)) * bend; return [[a[0] + Math.cos(b + A) * l1, a[1] + Math.sin(b + A) * l1], [a[0] + Math.cos(b) * d, a[1] + Math.sin(b) * d]]; };
-const B = { Rw: 88, R: [-158, -88], F: [158, -88], BB: [-14, -82], crank: 34, seat: [-82, -262], grip: [58, -300] }, L = { th: 112, sh: 106, to: 132, up: 80, fo: 74 };
+const B = { Rw: 88, R: [-158, -88], F: [158, -88], BB: [-14, -82], crank: 34, seat: [-82, -205], grip: [58, -272] }, L = { th: 112, sh: 106, to: 132, up: 80, fo: 74 };
 const tr = (p, x, y, s, rot) => { const c = Math.cos(rot), n = Math.sin(rot); return [x + (p[0] * c - p[1] * n) * s, y + (p[0] * n + p[1] * c) * s]; };
 const st = (pts, w, col, o = {}) => mk(pts, w, col, { prof: 'even', rough: .18, a: .9, ...o });
 const ring = (c, r, n = 26) => [...Array(n + 1)].map((_, i) => { const a = i / n * Math.PI * 2 + .3; return [c[0] + Math.cos(a) * r, c[1] + Math.sin(a) * r]; });
@@ -34,9 +34,9 @@ function mumStrokes(x, y, s, o) {
   // wheels, spokes, frame (ink-teal), the crank
   for (const c of [B.R, B.F]) { S.push(st(ring(c, B.Rw - 6).map(T), 9 * s, COL.tyre, { a: .85 })); for (let i = 0; i < 6; i++) { const a = wa + i * Math.PI / 3; S.push(st(lineP(c, [c[0] + Math.cos(a) * (B.Rw - 12), c[1] + Math.sin(a) * (B.Rw - 12)], 3).map(T), 1.6 * s, COL.tyre, { a: .5, nb: 0 })); } }
   const hb = [124, -206];
-  [[B.BB, B.R], [[-74, -236], B.R], [B.BB, [-78, -252]], [hb, B.F], [[118, -244], hb], [[118, -244], [112, -292]], [[112, -292], B.grip]].forEach(([a, b]) => S.push(st(lineP(a, b).map(T), 10 * s, COL.frame, { a: .88 })));
+  [[B.BB, B.R], [[-74, -186], B.R], [B.BB, [-78, -198]], [hb, B.F], [[118, -244], hb], [[118, -244], [112, -264]], [[112, -264], B.grip]].forEach(([a, b]) => S.push(st(lineP(a, b).map(T), 10 * s, COL.frame, { a: .88 })));
   S.push(st(qctrl(B.BB[0], B.BB[1], 70, -110, hb[0], hb[1], 10).map(T), 12 * s, COL.frame, { a: .88 }));
-  S.push(st([[-112, -270], [-86, -274], [-56, -270]].map(T), 12 * s, COL.tyre, { a: .9 }));
+  S.push(st([[-112, -213], [-86, -217], [-56, -213]].map(T), 12 * s, COL.tyre, { a: .9 }));
   // pose
   const hip = [B.seat[0] - 2, B.seat[1] - 14], sh = [hip[0] + Math.sin(.12) * L.to, hip[1] - Math.cos(.12) * L.to], head = [sh[0] + 12, sh[1] - 48];
   const leg = (a, down) => { const p = down ? [down[0], down[1] - 12] : [B.BB[0] + Math.cos(a) * B.crank - 4, B.BB[1] + Math.sin(a) * B.crank - 12]; return ik(hip, p, L.th, L.sh, -1); };
@@ -87,7 +87,7 @@ function mumState(t) {
   const o = { crank: x * .022, wa: x / B.Rw, speed: sp, t: tc };
   const unsure = t < E.go + 1.2 ? 1 : 1 - seg(t, E.go + 1.2, E.go + 3);
   o.wobble = (0.06 * Math.sin(tc * 7.3) + 0.03 * Math.sin(tc * 13.1)) * unsure * (t < 2.6 || (t > 6.4 && t < 8.6) ? 1 : 0.2);
-  if ((t >= 2.6 && t < 6.4) || (t >= 8.6 && t < 15.6) || t >= E.brake + 0.2) { o.footDown = [72, 0]; o.wobble = 0.012; }
+  if ((t >= 2.6 && t < 6.4) || (t >= 8.6 && t < 15.6) || t >= E.brake + 0.2) { o.footDown = [-40, 0]; o.wobble = 0.012; }
   if ((t >= 13.8 && t < 15.0) || t >= E.turn) o.lookBack = true;
   if (t >= E.smile) o.expr = 'proud';
   return { x, o };

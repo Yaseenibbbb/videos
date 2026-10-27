@@ -40,7 +40,7 @@ export function headSon(x, y, expr = 'calm') {
 }
 
 // ———— the bicycle (step-through frame, no basket) ————
-export const BIKE = { Rw: 88, R: [-158, -88], F: [158, -88], BB: [-14, -82], crank: 34, seat: [-82, -262], grip: [58, -300] };
+export const BIKE = { Rw: 88, R: [-158, -88], F: [158, -88], BB: [-14, -82], crank: 34, seat: [-82, -205], grip: [58, -272] };
 function wheel(c, a) {
   const [x, y] = c, R = BIKE.Rw;
   ring(x, y, R - 7, 12, P.tire); ring(x, y, R - 15, 3, P.rim);
@@ -55,14 +55,14 @@ function bikeBack(crank, wa) {
 function bikeFrame() {
   const B = BIKE, fw = 13, ht = [118, -244], hb = [124, -206];
   g.beginPath(); g.arc(B.R[0], B.R[1], B.Rw + 8, Math.PI * 1.08, Math.PI * 1.8); g.lineWidth = 6; g.lineCap = 'round'; g.strokeStyle = inkA(P.frame); g.stroke();
-  line([B.BB, B.R], fw - 3, P.frame); line([[-74, -236], B.R], fw - 4, P.frame);
-  line([B.BB, [-78, -252]], fw, P.frame);
+  line([B.BB, B.R], fw - 3, P.frame); line([[-74, -186], B.R], fw - 4, P.frame);
+  line([B.BB, [-78, -198]], fw, P.frame);
   curve([B.BB, [30, -110], [96, -170], hb], fw + 1, P.frame);            // the low, curved step-through tube
   line([ht, hb], fw + 3, P.frame);
   curve([hb, [140, -150], B.F], fw - 3, P.frame);
-  line([[-78, -252], B.seat], 7, P.metal);
-  blob([[-114, -276], [-58, -276], [-48, -268], [-66, -260], [-110, -260]], P.saddle);
-  line([ht, [114, -292]], 8, P.metal); curve([[114, -292], [98, -300], [76, -302], B.grip], 8, P.metal);
+  line([[-78, -198], B.seat], 7, P.metal);
+  blob([[-114, -219], [-58, -219], [-48, -211], [-66, -203], [-110, -203]], P.saddle);
+  line([ht, [114, -264]], 8, P.metal); curve([[114, -264], [98, -272], [76, -274], B.grip], 8, P.metal);
 }
 function crankFront(crank) {
   const B = BIKE, pn = [B.BB[0] + Math.cos(crank) * B.crank, B.BB[1] + Math.sin(crank) * B.crank];
